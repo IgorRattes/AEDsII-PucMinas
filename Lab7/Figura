@@ -1,0 +1,30 @@
+package Lab6;
+
+public abstract class Figura {
+	
+	//Declarando variaveis
+	public int x0;
+	public int y0;
+	
+	//Construtor Vazio
+	public Figura () {
+		x0 = 0; y0= 0;
+	}
+	
+	//Construtor que recebe informações informações
+	public Figura (int x, int y) {
+		x0 = x; y0= y;
+	}
+	
+	// Ele Retorna uma Figura com o x e y especificados
+	public String toString() {
+		return "Figura("+x0+" : "+ y0 + ")";
+	}
+	
+	//Metodo para fazer o uso de herança em outras classes
+	public abstract double GetArea();
+	
+	//Metodo para fazer o uso de herança em outras classes
+	public abstract double GetPerimetro();
+
+}
