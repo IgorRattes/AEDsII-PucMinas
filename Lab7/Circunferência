@@ -1,0 +1,69 @@
+package Lab6;
+
+import java.util.Random;
+
+public class Circunferencia extends Figura{
+	//Declarando a Variavel R tipo Double
+	private double R;
+	
+	//Construtor vazio com herança da classe figura
+	public Circunferencia() {
+	super();
+	 R = 0;
+	}
+	
+	//Construtor com parametro com herança da classe figura
+	public Circunferencia(int x, int y, double r) {
+	super(x, y);
+	R = r;
+	
+	}
+	
+	//Declarando metodos obrigatorios devido a herança GetArea
+	public double GetArea() {
+		
+		return Math.PI * Math.pow(R, 2);
+	}
+
+	//Declarando metodos obrigatorios devido a herança
+	public double GetPerimetro() {
+	
+		return 2 * Math.PI * R;
+	}
+	
+	//Metodo para calcular o valor de PI
+	double CalculaPI(int L) {
+        int numDentroCirculo = 0;
+        //declarando uma variavel do tipo aleatória
+        Random rand = new Random();
+
+        for (int i = 0; i <  L; i++) {
+            // Gera um ponto aleatório dentro do quadrado unitário
+            double x = rand.nextDouble();
+            double y = rand.nextDouble();
+
+            // Verifica se o ponto está dentro do círculo unitário
+            if (x*x + y*y <= 1) {
+                numDentroCirculo++;
+            }
+        }
+
+        // Estima o valor de PI
+        double pi = 4.0 * numDentroCirculo /  L;
+        return pi;
+    }
+	
+	//Metodo para calcular a area monte carlo com o valor L fornecido
+	public double GetAreaMonteCarlo(int L) {
+		double pi = CalculaPI(L);
+		
+		return pi * Math.pow(R,2);
+	}
+	
+	//Metodo para calcular o perimetro monte carlo com o valor L fornecido
+	public double GetPerimetroMonteCarlo(int L) {
+		double pi = CalculaPI(L);
+		return 2 * pi * R;
+	
+	}
+}
