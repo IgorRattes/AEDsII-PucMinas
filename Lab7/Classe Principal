@@ -1,0 +1,100 @@
+package Lab6;
+
+import java.text.DecimalFormat;
+
+
+public class ClassePrincipal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Retangulo R[] = new Retangulo[2];
+		Triangulo T[] = new Triangulo[2];
+		Quadrado Q[] = new Quadrado[2];
+		Circunferencia C1 = new Circunferencia(0,0, 8);
+		DecimalFormat Decimal = new DecimalFormat("0.000");
+		
+		R[0] = new Retangulo(2, 2, 1, 1);
+		R[1] = new Retangulo(2.5, 5, 3, 4);
+		T[0] = new Triangulo(2, 2, 2, 4, 1, 1);
+		T[1] = new Triangulo(1.2, 2, 3, 4, 3, 4);
+		Q[0] = new Quadrado(5, 5, 6, 6);
+		Q[1] = new Quadrado(5, 5, 6, 6);
+		
+		System.out.println("Retangulo:");
+		System.out.println(" ");
+		System.out.println(R[0].toString());
+		System.out.println(R[1].toString());
+		System.out.println(" ");
+		System.out.println("Area do Retangulo 1: "+ R[0].GetArea());
+		System.out.println("Area do Retangulo 2: "+ R[1].GetArea());
+		System.out.println(" ");
+
+		System.out.println("Perimetro do Retangulo 1: "+ R[0].GetPerimetro());
+		System.out.println("Perimetro do Retangulo 2: "+ R[1].GetPerimetro());
+		System.out.println(" ");
+		
+
+		
+		System.out.println("Diagonal do Retangulo 1: "+ R[0].GetDiagonal());
+		System.out.println("Diagonal do Retangulo 2: "+ R[1].GetDiagonal());
+		System.out.println(" ");
+		System.out.println(" ");
+
+		
+		System.out.println("Quadrado:");
+		System.out.println(" ");
+		System.out.println(Q[0].toString());
+		System.out.println(Q[1].toString());
+		System.out.println(" ");
+		System.out.println("Area do Quadrado 1: "+ Q[0].GetArea());
+		System.out.println("Area do Quadrado 2: "+ Q[1].GetArea());
+		System.out.println(" ");
+		
+		System.out.println("Perimetro do Quadrado 1: "+ Q[0].GetPerimetro());
+		System.out.println("Perimetro do Quadrado 2: "+ Q[1].GetPerimetro());
+		System.out.println(" ");
+		System.out.println(" ");
+		System.out.println("Triangulo: ");
+		System.out.println(" ");
+		
+		System.out.println(T[0].toString());
+		System.out.println(T[1].toString());
+		System.out.println(" ");
+		System.out.println("Area do Triangulo 1: "+ T[0].GetArea());
+		System.out.println("Area do Triangulo 2: "+ T[1].GetArea());
+		System.out.println(" ");
+
+
+		System.out.println("Perimetro do Triangulo 1: "+ T[0].GetPerimetro());
+		System.out.println("Perimetro do Triangulo 2: "+ T[1].GetPerimetro());
+		System.out.println(" ");
+		
+
+		//Imprimindo a area da circunferencia 1 C1
+		System.out.println("Area: " + Decimal.format(C1.GetArea()));
+		//Imprimindo a Perimetro da circunferencia 1 C1
+		System.out.println("Perimetro: " + Decimal.format(C1.GetPerimetro()));
+		//Imprimindo a area monte carlo circunferencia 1 C1 com 50
+		System.out.println(" ");
+		System.out.println("Area monte carlo para 50: " + Decimal.format(C1.GetAreaMonteCarlo(50)));
+		//Imprimindo a Perimetro monte carlo circunferencia 1 C1 com 50
+		System.out.println("Perimetro monte carlo para 50: " + Decimal.format(C1.GetPerimetroMonteCarlo(50))); 
+		System.out.println(" ");
+		//Imprimindo a area monte carlo circunferencia 1 C1 com 500
+		System.out.println("Area monte carlo para 500: " + Decimal.format(C1.GetAreaMonteCarlo(500)));
+		//Imprimindo a Perimetro monte carlo circunferencia 1 C1 com 500
+		System.out.println("Perimetro monte carlo para 500: " + Decimal.format(C1.GetPerimetroMonteCarlo(500))); 
+		System.out.println(" ");
+		//Imprimindo a area monte carlo circunferencia 1 C1 com 1000
+		System.out.println("Area monte carlo para 1000: " + Decimal.format(C1.GetAreaMonteCarlo(1000)));
+		//Imprimindo a Perimetro monte carlo circunferencia 1 C1 com 1000
+		System.out.println("Perimetro monte carlo para 1000: " + Decimal.format(C1.GetPerimetroMonteCarlo(1000))); 
+		System.out.println(" ");
+		//Imprimindo a area monte carlo circunferencia 1 C1 com 10000
+		System.out.println("Area monte carlo para 10000: " + Decimal.format(C1.GetAreaMonteCarlo(10000)));
+		//Imprimindo a Perimetro monte carlo circunferencia 1 C1 com 10000
+		System.out.println("Perimetro monte carlo para 10000: " + Decimal.format(C1.GetPerimetroMonteCarlo(10000))); 
+		
+	}
+
+}
